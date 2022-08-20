@@ -491,7 +491,7 @@ GO_TO_TMP_Protect:
 	mov	fs,	ax
 	mov	ss,	ax
 	mov	esp,	7E00h
-
+	; xchg bx,bx 保护模式
 	call	support_long_mode
 	test	eax,	eax
 
