@@ -1,4 +1,6 @@
-hello leiwenyong
+# OS介绍
+
+### 常用命令
 
 ```bash
 # 打印内存
