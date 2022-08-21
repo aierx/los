@@ -148,7 +148,7 @@ inline void * memset(void * Address,unsigned char C,long Count)
 					"3:	\n\t"
 					:"=&c"(d0),"=&D"(d1)
 					:"a"(tmp),"q"(Count),"0"(Count/8),"1"(Address)	
-					:"memory"					
+					:"memory"
 				);
 	return Address;
 }
@@ -287,7 +287,7 @@ inline int strncmp(char * FirstPart,char * SecondPart,long Count)
 /*
 */
 
-inline int strlen(char * String)
+static inline int strlen(char * String)
 {
 	register int __res;
 	__asm__	__volatile__	(	"cld	\n\t"
