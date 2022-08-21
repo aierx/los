@@ -3,3 +3,4 @@
 .vscode
 *.s
 *.o
+kernel/system
