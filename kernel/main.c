@@ -27,7 +27,11 @@ void Start_Kernel(void)
 	sys_vector_init();
 
 	color_printk(RED,BLACK,"memory init \n");
+	color_printk(RED,BLACK,"interrupt init \n");
 	init_memory();
+
+	color_printk(RED,BLACK,"interrupt init \n");
+	init_interrupt();
 
 	while(1)
 		;
