@@ -16,7 +16,6 @@ all: system
 	
 
 system:	$(O_OBJ) head.o entry.o
-	echo $(O_OBJ)
 	ld -b elf64-x86-64 -z muldefs -o system head.o entry.o $(O_OBJ) -T Kernel.lds
 
 %.o: %.c

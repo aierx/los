@@ -22,16 +22,25 @@ void Start_Kernel(void)
 
 	load_TR(8);
 
-	set_tss64(0xffff800000007c00, 0xffff800000007c00, 0xffff800000007c00, 0xffff800000007c00, 0xffff800000007c00, 0xffff800000007c00, 0xffff800000007c00, 0xffff800000007c00, 0xffff800000007c00, 0xffff800000007c00);
+	set_tss64(
+		0xffff800000007c00, 
+		0xffff800000007c00, 
+		0xffff800000007c00, 
+		0xffff800000007c00, 
+		0xffff800000007c00, 
+		0xffff800000007c00, 
+		0xffff800000007c00, 
+		0xffff800000007c00, 
+		0xffff800000007c00, 
+		0xffff800000007c00);
 
 	sys_vector_init();
 
 	color_printk(RED,BLACK,"memory init \n");
-	color_printk(RED,BLACK,"interrupt init \n");
-	init_memory();
+	// init_memory();
 
-	color_printk(RED,BLACK,"interrupt init \n");
-	init_interrupt();
+	// color_printk(RED,BLACK,"interrupt init \n");
+	// init_interrupt();
 
 	while(1)
 		;

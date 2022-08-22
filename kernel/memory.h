@@ -226,7 +226,7 @@ struct Zone
 };
 
 
-extern struct Global_Memory_Descriptor memory_management_struct;
+static struct Global_Memory_Descriptor memory_management_struct;
 
 unsigned long page_init(struct Page * page,unsigned long flags);
 
@@ -260,7 +260,7 @@ do								\
 /*
 */
 
-inline unsigned long * Get_gdt()
+static inline unsigned long * Get_gdt()
 {
 	unsigned long * tmp;
 	__asm__ __volatile__	(
